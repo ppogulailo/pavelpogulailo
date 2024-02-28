@@ -7,6 +7,7 @@ export default async function Overview() {
         {logo: 'github.svg', href: 'https://github.com/ppogulailo'},
         {logo: 'linkedin.svg', href: 'https://linkedin.com/pogulailopavel'},
         {logo: 'twitter.svg', href: 'https://twitter.com'},
+        {logo: 'telegram.svg', href: 'https://t.me/Pogun'},
         {
             logo: 'cv.png',
             href: 'https://drive.google.com/file/d/1TBARV_6kX1eeKjYeZGy9o4Y9zaUYSiug/view?usp=drive_link',
@@ -16,7 +17,7 @@ export default async function Overview() {
         {text: 'Employments', href: '/employments'},
         {text: 'Courses', href: '/courses'},
         {text: 'Skills', href: '/skills'},
-        {text: 'StartUps', href: '/startUps'},
+        {text: 'StartUps', href: '/startups'},
     ]
     return (
         <>
@@ -39,13 +40,22 @@ export default async function Overview() {
                             height={200}
                         />
                     </div>
-                    <div className="text-3xl text-center mt-2">Pavel Pogulailo</div>
+                    <div className="text-3xl text-center mt-2 font-bold">Pavel Pogulailo</div>
+                    <div className="text-xl text-center mt-2 ">Node.js / Full-stack Developer </div>
                     <div className="mt-5">
                         Highly skilled Node JS Developer with 3.5 years of comertial experience in
                         optimizing and deploying high-performance applications for ecommerce,
-                        healthcare etc. Worked with whole list of AWS main services. Skilled in
-                        optimizing processes, enhancing robustness, ensuring scalability, conducting
-                        code reviews, and mentoring.
+                        healthcare etc. Skilled in optimizing processes, enhancing robustness,
+                        ensuring scalability, conducting code reviews, and mentoring.
+                    </div>
+                    <div className="mt-5">
+                        I am a proficient software developer with a strong focus on deploying
+                        applications on cloud services and managing microservices architectures. I
+                        have extensive experience in designing, implementing, and maintaining
+                        scalable and resilient systems on platforms like AWS, Azure, and Google
+                        Cloud. I am proficient in containerization technologies such as Docker and
+                        Kubernetes, which I use to orchestrate microservices and ensure seamless
+                        deployment processes.
                     </div>
                     <div className="flex justify-center mt-4">
                         {images.map(({logo, href}, index) => (
@@ -66,7 +76,7 @@ export default async function Overview() {
                     </div>
                     <div className="flex flex-col items-center justify-center">
                         {buttons.map(({text, href}, index) => (
-                            <Link href={href} key={index} className="w-[700px]">
+                            <Link href={href} key={index} className="w-[700px] mt-3 ">
                                 <Button>{text}</Button>
                             </Link>
                         ))}
