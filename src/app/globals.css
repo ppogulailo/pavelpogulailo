@@ -57,6 +57,15 @@
 
 /* min-h-screen	grid grid-rows-[auto_1fr_auto] */
 
+.skill-dot::before {
+  content: '• ';
+  color: black; /* Change color if needed */
+  font-weight: bold; /* Adjust weight if needed */
+  display: inline-block; /* Use inline-block for proper alignment */
+  width: 1em; /* Ensures that the dot does not affect the alignment */
+  margin-left: -1em; /* Adjusts position to the left of the content */
+}
+
 @layer base {
   html,
   body,
