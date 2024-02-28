@@ -7,10 +7,10 @@ interface IButton {
 export const Button = ({children}: IButton) => {
     return (
         <div className="mt-2">
-            <div className="pointer-events-none relative rounded-lg shadow-lg ">
+            <div className="pointer-events-none relative rounded-lg shadow-lg">
                 <div className="relative isolate z-10 m-[-2px] overflow-hidden rounded-[inherit] p-[3px]">
-                    <div className="relative z-50">
-                        <div className="flex items-center space-x-3 rounded-lg border border-[#ffffff10] bg-gray-50 px-8 py-4 font-bold text-gray-900 hover:bg-gray-200 dark:bg-[#0e1422] dark:text-white">
+                    <div className="relative z-50 ">
+                        <div className="flex items-center space-x-3 rounded-lg border border-[#ffffff10] bg-gray-50 px-8 py-4 font-bold text-gray-900 dark:bg-[#0e1422] dark:text-white">
                             <span>{children}</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
