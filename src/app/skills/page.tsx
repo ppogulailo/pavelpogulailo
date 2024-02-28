@@ -1,28 +1,6 @@
+import {skills1, skills2} from '@/app/skills/data'
+
 export default async function Skills() {
-    const skills1 = [
-        'JavaScript ( ES6+ )',
-        'TypreScript',
-        'Node.js',
-        'HTML, PUG , CSS',
-        'Nest.js, Express',
-        'React, Angular, Vue',
-        'Next.js',
-        'MongoDB, PostgreSQL',
-        'AWS, GCP, Azure',
-        'RabbitMQ, Kafka',
-    ]
-    const skills2 = [
-        'CI/CD',
-        'Kubernetes',
-        'Nginx, Docker',
-        'Redux, Redux-saga',
-        'OOP, SOLID',
-        'Puppeteer, Cheerio',
-        'Jest, WebDriverIo',
-        'Gulp, Webpack',
-        'REST , GraphQL',
-        'GIT, GitLab, BitBucket',
-    ]
     return (
         <div className="h-100 h-screen flex justify-center">
             <div
