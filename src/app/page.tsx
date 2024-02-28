@@ -7,6 +7,7 @@ export default async function Overview() {
         {logo: 'github.svg', href: 'https://github.com/ppogulailo'},
         {logo: 'linkedin.svg', href: 'https://linkedin.com/pogulailopavel'},
         {logo: 'twitter.svg', href: 'https://twitter.com'},
+        {logo: 'upwork.svg', href: 'https://www.upwork.com/freelancers/~01c6b7d9f2eaad2563'},
         {logo: 'telegram.svg', href: 'https://t.me/Pogun'},
         {
             logo: 'cv.png',
