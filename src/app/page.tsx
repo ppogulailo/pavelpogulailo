@@ -1,11 +1,22 @@
 import Image from 'next/image'
 import {Button} from '@/components/Button'
+import Link from 'next/link'
 
 export default async function Overview() {
     const images = [
         {logo: 'github.svg', href: 'https://github.com/ppogulailo'},
         {logo: 'linkedin.svg', href: 'https://linkedin.com/pogulailopavel'},
         {logo: 'twitter.svg', href: 'https://twitter.com'},
+        {
+            logo: 'cv.png',
+            href: 'https://drive.google.com/file/d/1TBARV_6kX1eeKjYeZGy9o4Y9zaUYSiug/view?usp=drive_link',
+        },
+    ]
+    const buttons = [
+        {text: 'Employments', href: '/employments'},
+        {text: 'Courses', href: '/courses'},
+        {text: 'Skills', href: '/skills'},
+        {text: 'StartUps', href: '/startUps'},
     ]
     return (
         <>
@@ -37,24 +48,28 @@ export default async function Overview() {
                         code reviews, and mentoring.
                     </div>
                     <div className="flex justify-center mt-4">
-                        {images.map(({logo, href}, key) => (
-                            <a href={href}>
+                        {images.map(({logo, href}, index) => (
+                            <a
+                                href={href}
+                                className="p-4 rounded-full mr-4 relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg"
+                            >
                                 <Image
-                                    key={key}
-                                    className="rounded-full mr-4"
+                                    key={index}
                                     src={`/assets/logos/${logo}`}
                                     alt="Github-Image"
                                     width={30}
                                     height={30}
                                 />
+                                <div className="absolute inset-0 rounded-full border-2 border-transparent hover:border-purple-500"></div>
                             </a>
                         ))}
                     </div>
-                    <div className="m-auto">
-                        <Button>Employments</Button>
-                        <Button>Courses</Button>
-                        <Button>Skills</Button>
-                        <Button>StartUps</Button>
+                    <div className="flex flex-col items-center justify-center">
+                        {buttons.map(({text, href}, index) => (
+                            <Link href={href} key={index} className="w-[700px]">
+                                <Button>{text}</Button>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </div>
